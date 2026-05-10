@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aldridge Americana — American history, told well</title>
+<meta name="description" content="Aldridge Americana publishes nonfiction American history for the United States semiquincentennial and beyond. First titles arriving in 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,800;0,9..144,900;1,9..144,500;1,9..144,800&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #e4ecf2;          /* pale dove blue */
+    --paper-2: #cfdae2;
+    --ink: #15203b;            /* deep navy ink */
+    --ink-2: #3a4055;
+    --ink-3: #5e637a;
+    --rule: #15203b;
+    --red: #a8232c;            /* classic red */
+    --red-2: #841a22;
+    --gold: #a07418;           /* aged gold */
+    --cream: #f1f5f8;
+    --vellum: #d8e2eb;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Crimson Pro", Georgia, serif;
+    font-size: 18px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 800;
+    line-height: 1.06;
+    letter-spacing: -0.012em;
+    margin: 0;
+  }
+  a { color: inherit; }
+  p { margin: 0 0 1em; }
+
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+  .narrow { max-width: 720px; margin: 0 auto; padding: 0 32px; }
+  .ui { font-family: "Inter", system-ui, sans-serif; }
+
+  /* Decorative rules */
+  .rule { height: 1px; background: var(--rule); border: 0; margin: 0; }
+  .rule-double {
+    height: 5px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+    margin: 0;
+  }
+  .ornament {
+    text-align: center; color: var(--red);
+    font-family: "Fraunces", serif; font-size: 18px;
+    letter-spacing: 0.6em;
+    margin: 0;
+    line-height: 1;
+  }
+  .ornament-row {
+    display: flex; align-items: center; gap: 18px;
+    color: var(--ink-2);
+  }
+  .ornament-row::before, .ornament-row::after {
+    content: ""; flex: 1; height: 1px; background: var(--ink); opacity: .25;
+  }
+  .small-caps {
+    font-family: "Inter", sans-serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ink-2);
+  }
+
+  /* ===== NAV ===== */
+  .nav { background: var(--paper); border-bottom: 1px solid var(--rule); }
+  .nav-row {
+    max-width: 1100px; margin: 0 auto; padding: 16px 32px;
+    display: flex; align-items: center; gap: 32px;
+  }
+  .brand {
+    text-decoration: none; color: var(--ink);
+    display: flex; align-items: center;
+  }
+  .brand-logo { height: 60px; width: auto; display: block; }
+  .nav-links {
+    display: flex; gap: 28px; margin-left: auto;
+    font-family: "Inter", sans-serif;
+    font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+  }
+  .nav-links a {
+    text-decoration: none; color: var(--ink);
+    padding-bottom: 2px; border-bottom: 1px solid transparent;
+  }
+  .nav-links a:hover { border-bottom-color: var(--red); color: var(--red); }
+
+  /* ===== HERO ===== */
+  .hero {
+    padding: 84px 32px 80px;
+    text-align: center;
+    border-bottom: 1px solid var(--rule);
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(168,35,44,.06), transparent 60%),
+      var(--paper);
+  }
+  .hero .small-caps { display: inline-block; margin-bottom: 32px; }
+  .hero-rule { width: 80px; margin: 0 auto 28px; }
+  .hero h1 {
+    font-size: clamp(54px, 7.5vw, 108px);
+    font-weight: 900;
+    max-width: 880px; margin: 0 auto 32px;
+  }
+  .hero h1 em { font-style: italic; color: var(--red); font-weight: 800; }
+  .hero p.lede {
+    font-family: "Crimson Pro", serif;
+    font-size: 22px; font-style: italic; font-weight: 400;
+    max-width: 620px; margin: 0 auto 36px; color: var(--ink-2);
+    line-height: 1.5;
+  }
+  .hero .ornament { margin: 28px auto 28px; }
+  .hero .first-titles {
+    font-family: "Fraunces", serif; font-style: italic; font-weight: 500;
+    font-size: 17px; color: var(--ink-2);
+    margin: 0 0 14px;
+  }
+  .hero a.quiet-link {
+    font-family: "Inter", sans-serif;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink); text-decoration: none;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 4px;
+  }
+  .hero a.quiet-link:hover { color: var(--red); border-bottom-color: var(--red); }
+
+  /* Banner strip */
+  .banner {
+    border-bottom: 1px solid var(--rule);
+    padding: 18px 32px;
+    text-align: center;
+    font-family: "Fraunces", serif; font-style: italic; font-weight: 500;
+    font-size: 16px; color: var(--ink-2);
+    letter-spacing: 0.02em;
+  }
+  .banner span + span::before { content: " · "; color: var(--red); padding: 0 10px; }
+
+  /* ===== ON OUR WORK (Mission) ===== */
+  .mission {
+    padding: 100px 32px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .mission-head {
+    text-align: center; margin-bottom: 56px;
+  }
+  .mission-head h2 {
+    font-size: clamp(36px, 4.6vw, 60px); font-style: italic;
+    margin-bottom: 14px;
+  }
+  .mission-head .small-caps { display: block; margin-bottom: 18px; }
+  .mission-body { max-width: 660px; margin: 0 auto; font-size: 19px; color: var(--ink); line-height: 1.7; }
+  .mission-body p:first-of-type::first-letter {
+    font-family: "Fraunces", serif; font-weight: 900;
+    font-size: 76px; float: left; line-height: 0.85;
+    padding: 6px 14px 0 0; color: var(--red);
+  }
+  blockquote.pull {
+    margin: 36px 0; padding: 20px 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    font-family: "Fraunces", serif; font-style: italic; font-weight: 600;
+    font-size: 24px; line-height: 1.35;
+    color: var(--ink); text-align: center;
+  }
+  blockquote.pull::before, blockquote.pull::after {
+    content: "✦"; color: var(--red); font-style: normal; font-size: 14px;
+    display: block; margin: 0 0 14px;
+  }
+  blockquote.pull::after { margin: 14px 0 0; }
+
+  /* ===== FORTHCOMING (Editorial list) ===== */
+  .forthcoming {
+    padding: 100px 32px;
+    border-bottom: 1px solid var(--rule);
+    background: var(--vellum);
+  }
+  .forthcoming-head { text-align: center; margin-bottom: 64px; }
+  .forthcoming-head .small-caps { display: block; margin-bottom: 16px; }
+  .forthcoming-head h2 { font-size: clamp(36px, 4.6vw, 56px); margin-bottom: 12px; }
+  .forthcoming-head p { font-style: italic; color: var(--ink-2); font-size: 19px; max-width: 540px; margin: 0 auto; }
+  .toc {
+    max-width: 800px; margin: 0 auto;
+    border-top: 1px solid var(--rule);
+  }
+  .toc-item {
+    display: grid; grid-template-columns: 60px 1fr auto; gap: 24px;
+    align-items: baseline;
+    padding: 28px 6px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .toc-num {
+    font-family: "Fraunces", serif; font-style: italic; font-weight: 700;
+    color: var(--red); font-size: 24px;
+    line-height: 1;
+  }
+  .toc-text h3 {
+    font-family: "Fraunces", serif; font-weight: 700;
+    font-size: clamp(22px, 2.2vw, 28px);
+    line-height: 1.15; margin-bottom: 8px;
+  }
+  .toc-text p {
+    font-family: "Crimson Pro", serif; font-style: italic;
+    color: var(--ink-2); font-size: 17px; line-height: 1.45;
+    margin: 0;
+  }
+  .toc-when {
+    font-family: "Inter", sans-serif; font-size: 11px;
+    font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink-3); white-space: nowrap;
+  }
+
+  /* ===== NEWSLETTER (inline) ===== */
+  .newsletter {
+    padding: 100px 32px;
+    text-align: center;
+    border-bottom: 1px solid var(--rule);
+  }
+  .newsletter h2 {
+    font-size: clamp(32px, 4vw, 48px); font-style: italic;
+    margin-bottom: 14px; max-width: 620px; margin-left: auto; margin-right: auto;
+  }
+  .newsletter > .narrow > p {
+    color: var(--ink-2); font-size: 18px; max-width: 480px; margin: 0 auto 32px;
+  }
+  .news-form {
+    display: grid; grid-template-columns: 1fr 1fr auto; gap: 0;
+    max-width: 580px; margin: 0 auto;
+    border: 1px solid var(--ink);
+    background: var(--cream);
+  }
+  .news-form input {
+    border: 0; background: transparent;
+    padding: 16px 18px; font: inherit; font-size: 17px; outline: none;
+    color: var(--ink);
+    border-right: 1px solid var(--ink);
+  }
+  .news-form input::placeholder { color: var(--ink-3); }
+  .news-form input:focus { background: var(--paper); }
+  .news-form button {
+    border: 0; background: var(--ink); color: var(--cream);
+    font-family: "Inter", sans-serif; font-weight: 700; font-size: 12px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    padding: 0 28px; cursor: pointer;
+  }
+  .news-form button:hover { background: var(--red); }
+
+  /* ===== CONTACT ===== */
+  .contact { padding: 100px 32px; }
+  .contact-head { text-align: center; margin-bottom: 56px; }
+  .contact-head .small-caps { display: block; margin-bottom: 16px; }
+  .contact-head h2 { font-size: clamp(34px, 4.2vw, 52px); }
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1.1fr; gap: 64px;
+    max-width: 1000px; margin: 0 auto;
+  }
+  .contact-info { font-size: 18px; }
+  .contact-info p { color: var(--ink-2); }
+  .contact-info dl { margin: 28px 0 0; padding: 0; }
+  .contact-info dt {
+    font-family: "Inter", sans-serif; font-weight: 700; font-size: 11px;
+    letter-spacing: 0.22em; text-transform: uppercase; color: var(--red);
+    margin-top: 22px;
+  }
+  .contact-info dt:first-of-type { margin-top: 0; }
+  .contact-info dd { margin: 4px 0 0; font-size: 17px; color: var(--ink); }
+
+  .contact-form .field { display: flex; flex-direction: column; gap: 4px; margin-bottom: 18px; }
+  .contact-form label {
+    font-family: "Inter", sans-serif; font-weight: 700; font-size: 11px;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-2);
+  }
+  .contact-form input, .contact-form textarea, .contact-form select {
+    border: 0; border-bottom: 1px solid var(--ink);
+    background: transparent;
+    padding: 10px 0; font: inherit; font-size: 17px; color: var(--ink); outline: none;
+    border-radius: 0;
+  }
+  .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
+    border-bottom-color: var(--red);
+  }
+  .contact-form textarea { resize: vertical; min-height: 100px; }
+  .contact-form button {
+    margin-top: 8px;
+    background: var(--ink); color: var(--cream);
+    border: 0; font: inherit;
+    font-family: "Inter", sans-serif; font-weight: 700; font-size: 13px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    padding: 14px 28px; cursor: pointer;
+  }
+  .contact-form button:hover { background: var(--red); }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--ink); color: var(--cream);
+    padding: 60px 32px 36px;
+    text-align: center;
+    border-top: 4px solid var(--red);
+  }
+  footer .footer-mark {
+    height: 80px; width: auto; display: block;
+    margin: 0 auto 18px;
+    filter: invert(1);
+  }
+  footer .footer-tag {
+    font-family: "Fraunces", serif; font-style: italic; font-size: 18px;
+    color: rgba(251,245,230,.85); margin-bottom: 28px;
+  }
+  footer .footer-meta {
+    font-family: "Inter", sans-serif; font-size: 11px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: rgba(251,245,230,.55);
+  }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { color: var(--cream); }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 880px) {
+    .nav-links { display: none; }
+    .hero { padding: 56px 24px 60px; }
+    .toc-item { grid-template-columns: 40px 1fr; row-gap: 6px; }
+    .toc-when { grid-column: 2; padding-top: 4px; }
+    .news-form { grid-template-columns: 1fr; }
+    .news-form input { border-right: 0; border-bottom: 1px solid var(--ink); }
+    .news-form button { padding: 16px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+    .mission, .forthcoming, .newsletter, .contact { padding: 72px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== PARENT STRIP ===== -->
+<div style="background: #15203b; color: rgba(241,245,248,0.85); font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.04em; padding: 7px 28px; text-align: center; border-bottom: 2px solid #15203b;">
+  An imprint of
+  <a href="https://pagepathpublishinggroup.com/" style="color: #d4a73c; font-weight: 700; text-decoration: none; margin-left: 4px;">Page &amp; Path Publishing Group →</a>
+</div>
+
+<!-- ===== NAV ===== -->
+<header class="nav">
+  <div class="nav-row">
+    <a href="#" class="brand">
+      <img src="logo.png" alt="Aldridge Americana" class="brand-logo">
+    </a>
+    <nav class="nav-links">
+      <a href="#mission">Mission</a>
+      <a href="#forthcoming">Forthcoming</a>
+      <a href="#newsletter">Announce list</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <hr class="hero-rule rule" style="margin-top: 8px;">
+  <h1>American history, <em>told well</em>.</h1>
+  <p class="lede">A new imprint publishing nonfiction American history for the semiquincentennial and the long American story it commemorates.</p>
+  <p class="ornament">✦ ✦ ✦</p>
+  <p class="first-titles">First titles arriving 2026</p>
+  <a href="#forthcoming" class="quiet-link">See the first list</a>
+</section>
+
+<div class="banner">
+  <span>Original research</span><span>Plain-spoken prose</span><span>Footnotes you can trust</span><span>Built to last</span>
+</div>
+
+<!-- ===== ON OUR WORK ===== -->
+<section id="mission" class="mission">
+  <div class="mission-head">
+    <h2>History worth keeping.</h2>
+  </div>
+  <div class="mission-body">
+    <p>America's 250th birthday deserves more than commemorative mugs and bunting. It deserves books that take the country seriously, written by people who have done the reading. That is the job we have set for ourselves, and the standard against which every Aldridge title will be measured.</p>
+    <blockquote class="pull">Patriotic in the original sense, that is, love of country expressed through honest attention to it.</blockquote>
+    <p>Our list focuses on American history broadly understood: the founding documents and the people who actually used them, frontier and migration, the civic institutions that hold the country together, regional and local stories, and the lives of ordinary Americans whose names usually do not make it into the index.</p>
+    <p>We publish for general readers, students, and the kind of teacher who hands you a book and says, start with this one.</p>
+  </div>
+</section>
+
+<!-- ===== FORTHCOMING ===== -->
+<section id="forthcoming" class="forthcoming">
+  <div class="forthcoming-head">
+    <h2>The first list.</h2>
+    <p>Six titles in the works for 2026 and 2027. Subscribe to the announce list for publication dates as they are set.</p>
+  </div>
+  <ol class="toc" style="list-style: none; padding: 0; margin: 0 auto;">
+
+    <li class="toc-item">
+      <span class="toc-num">I.</span>
+      <div class="toc-text">
+        <h3>The Hidden Stories Behind America's Most Iconic Symbols</h3>
+        <p>What the eagle, the flag, the bell, the seal, and a half-dozen other emblems actually mean, and how they got that way.</p>
+      </div>
+      <span class="toc-when">In development</span>
+    </li>
+
+    <li class="toc-item">
+      <span class="toc-num">II.</span>
+      <div class="toc-text">
+        <h3>The People Who Built America</h3>
+        <p>The Workers, Dreamers, and Outsiders Who Made This Country.</p>
+      </div>
+      <span class="toc-when">In development</span>
+    </li>
+
+    <li class="toc-item">
+      <span class="toc-num">III.</span>
+      <div class="toc-text">
+        <h3>Founding Moments</h3>
+        <p>The 8 Days That Could Have Changed America Forever.</p>
+      </div>
+      <span class="toc-when">In development</span>
+    </li>
+
+    <li class="toc-item">
+      <span class="toc-num">IV.</span>
+      <div class="toc-text">
+        <h3>America's Best Ideas</h3>
+        <p>The Ideas That Built America and the Price We Still Pay.</p>
+      </div>
+      <span class="toc-when">In development</span>
+    </li>
+
+    <li class="toc-item">
+      <span class="toc-num">V.</span>
+      <div class="toc-text">
+        <h3>Teaching Your Kids America's Story</h3>
+        <p>Conversation Starters for Every Age, from Toddlers to Teens.</p>
+      </div>
+      <span class="toc-when">In development</span>
+    </li>
+
+    <li class="toc-item">
+      <span class="toc-num">VI.</span>
+      <div class="toc-text">
+        <h3>America Through Her Eyes</h3>
+        <p>Women Who Changed the Country and Rarely Got a Textbook Page.</p>
+      </div>
+      <span class="toc-when">In development</span>
+    </li>
+
+  </ol>
+</section>
+
+<!-- ===== NEWSLETTER ===== -->
+<section id="newsletter" class="newsletter">
+  <div class="narrow">
+    <p class="ornament">✦</p>
+    <h2><em>Be among the first readers.</em></h2>
+    <p>One short note when each title goes to press, and an early offer for the launch. No filler, no resharing your address.</p>
+    <form class="news-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+      <input type="hidden" name="form-name" value="newsletter">
+      <p hidden><label>Skip if human: <input name="bot-field"></label></p>
+      <input name="name" type="text" placeholder="Your name" required>
+      <input name="email" type="email" placeholder="Your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="contact">
+  <div class="contact-head">
+    <h2>Letters welcome.</h2>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <p>Aldridge Americana is a small press in its first season. Submissions are not yet open, but introductions, press inquiries, and partnerships with historical societies, museums, and schools are very much welcome.</p>
+      <dl>
+        <dt>General</dt>
+        <dd>info@aldridgeamericana.com</dd>
+        <dt>Press &amp; partnerships</dt>
+        <dd>press@aldridgeamericana.com</dd>
+        <dt>Submissions</dt>
+        <dd>Opening 2026 &mdash; subscribe above to be notified.</dd>
+      </dl>
+    </div>
+    <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+      <input type="hidden" name="form-name" value="contact">
+      <p hidden><label>Skip if human: <input name="bot-field"></label></p>
+      <div class="field">
+        <label for="c-name">Your name</label>
+        <input id="c-name" name="name" type="text" required>
+      </div>
+      <div class="field">
+        <label for="c-email">Email</label>
+        <input id="c-email" name="email" type="email" required>
+      </div>
+      <div class="field">
+        <label for="c-topic">Subject</label>
+        <select id="c-topic" name="topic">
+          <option>General hello</option>
+          <option>Press or media inquiry</option>
+          <option>Partnership or event</option>
+          <option>Historical society or institution</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="c-msg">Message</label>
+        <textarea id="c-msg" name="message"></textarea>
+      </div>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <img src="logo.png" alt="Aldridge Americana" class="footer-mark">
+  <p class="footer-tag">American history, told well.</p>
+  <p class="footer-meta">© 2026 Aldridge Americana &nbsp;·&nbsp; An imprint of <a href="https://pageandpath.com/">Page &amp; Path Publishing Group</a> &nbsp;·&nbsp; Established 2026</p>
+</footer>
+
+</body>
+</html>
