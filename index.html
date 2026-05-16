@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aldridge Americana — American history, told well</title>
-<meta name="description" content="Aldridge Americana publishes nonfiction American history for the United States semiquincentennial and beyond. First titles arriving in 2026.">
+<title>Aldridge Americana — American history, reexamined</title>
+<meta name="description" content="Aldridge Americana publishes nonfiction American history for the United States semiquincentennial and beyond. First book in print: The Hidden Stories Behind America's Most Iconic Symbols by Bennett Aldridge.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,800;0,9..144,900;1,9..144,500;1,9..144,800&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
@@ -132,6 +132,50 @@
     padding-bottom: 4px;
   }
   .hero a.quiet-link:hover { color: var(--red); border-bottom-color: var(--red); }
+
+  /* ===== NOW IN PRINT ===== */
+  .now-print {
+    padding: 88px 32px;
+    border-bottom: 1px solid var(--rule);
+    background: var(--vellum);
+  }
+  .now-grid {
+    display: grid; grid-template-columns: 320px 1fr; gap: 64px;
+    align-items: center;
+    max-width: 1040px; margin: 0 auto;
+  }
+  .now-cover img {
+    width: 100%; height: auto; display: block;
+    border: 1px solid var(--ink);
+    box-shadow: 8px 8px 0 rgba(21,32,59,.18);
+  }
+  .now-text .small-caps { display: block; margin-bottom: 16px; }
+  .now-text h2 {
+    font-size: clamp(34px, 4.2vw, 52px);
+    margin-bottom: 14px;
+  }
+  .now-text .now-sub {
+    font-family: "Fraunces", serif; font-style: italic; font-weight: 500;
+    font-size: 21px; color: var(--red); margin: 0 0 22px;
+  }
+  .now-text .byline {
+    font-family: "Inter", sans-serif; font-size: 12px; font-weight: 700;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ink-2); margin: 0 0 22px;
+  }
+  .now-text .now-desc {
+    font-size: 18px; color: var(--ink); margin: 0 0 28px;
+    line-height: 1.6;
+    max-width: 540px;
+  }
+  .buy-link {
+    font-family: "Inter", sans-serif; font-size: 13px; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink); text-decoration: none;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 4px;
+  }
+  .buy-link:hover { color: var(--red); border-bottom-color: var(--red); }
 
   /* Banner strip */
   .banner {
@@ -331,7 +375,8 @@
     .news-form input { border-right: 0; border-bottom: 1px solid var(--ink); }
     .news-form button { padding: 16px; }
     .contact-grid { grid-template-columns: 1fr; gap: 48px; }
-    .mission, .forthcoming, .newsletter, .contact { padding: 72px 24px; }
+    .mission, .forthcoming, .newsletter, .contact, .now-print { padding: 72px 24px; }
+    .now-grid { grid-template-columns: 1fr; gap: 36px; max-width: 460px; }
   }
 </style>
 </head>
@@ -350,9 +395,9 @@
       <img src="logo.png" alt="Aldridge Americana" class="brand-logo">
     </a>
     <nav class="nav-links">
+      <a href="#now-print">The first book</a>
       <a href="#mission">Mission</a>
-      <a href="#forthcoming">Forthcoming</a>
-      <a href="#newsletter">Announce list</a>
+      <a href="#forthcoming">What's next</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -361,16 +406,35 @@
 <!-- ===== HERO ===== -->
 <section class="hero">
   <hr class="hero-rule rule" style="margin-top: 8px;">
-  <h1>American history, <em>told well</em>.</h1>
+  <h1>American history, <em>reexamined</em>.</h1>
   <p class="lede">A new imprint publishing nonfiction American history for the semiquincentennial and the long American story it commemorates.</p>
   <p class="ornament">✦ ✦ ✦</p>
-  <p class="first-titles">First titles arriving 2026</p>
-  <a href="#forthcoming" class="quiet-link">See the first list</a>
+  <p class="first-titles">First book in print &nbsp;·&nbsp; more arriving 2026</p>
+  <a href="#now-print" class="quiet-link">Read the first book</a>
 </section>
 
 <div class="banner">
   <span>Original research</span><span>Plain-spoken prose</span><span>Footnotes you can trust</span><span>Built to last</span>
 </div>
+
+<!-- ===== NOW IN PRINT ===== -->
+<section id="now-print" class="now-print">
+  <div class="now-grid">
+    <div class="now-cover">
+      <a href="https://www.amazon.com/dp/1970516291" target="_blank" rel="noopener">
+        <img src="covers/1970516291.jpg" alt="The Hidden Stories Behind America's Most Iconic Symbols">
+      </a>
+    </div>
+    <div class="now-text">
+      <span class="small-caps">First book &nbsp;·&nbsp; Now available</span>
+      <h2>The Hidden Stories Behind America's Most Iconic Symbols</h2>
+      <p class="now-sub">America at 250.</p>
+      <p class="byline">By Bennett Aldridge</p>
+      <p class="now-desc">The eagle, the flag, the bell, the seal. What our most familiar symbols actually mean, where they came from, and why they still matter as the country marks its 250th birthday.</p>
+      <a href="https://www.amazon.com/dp/1970516291" target="_blank" rel="noopener" class="buy-link">Buy on Amazon &rarr;</a>
+    </div>
+  </div>
+</section>
 
 <!-- ===== ON OUR WORK ===== -->
 <section id="mission" class="mission">
@@ -378,32 +442,23 @@
     <h2>History worth keeping.</h2>
   </div>
   <div class="mission-body">
-    <p>America's 250th birthday deserves more than commemorative mugs and bunting. It deserves books that take the country seriously, written by people who have done the reading. That is the job we have set for ourselves, and the standard against which every Aldridge title will be measured.</p>
-    <blockquote class="pull">Patriotic in the original sense, that is, love of country expressed through honest attention to it.</blockquote>
-    <p>Our list focuses on American history broadly understood: the founding documents and the people who actually used them, frontier and migration, the civic institutions that hold the country together, regional and local stories, and the lives of ordinary Americans whose names usually do not make it into the index.</p>
-    <p>We publish for general readers, students, and the kind of teacher who hands you a book and says, start with this one.</p>
+    <p>America's 250th birthday calls for books that take the country seriously. That is what Aldridge is built for.</p>
+    <blockquote class="pull">Patriotic in the original sense: love of country<br>paid in honest attention to it.</blockquote>
+    <p>Our books cover the founding documents and the people who actually used them, frontier and migration, courts and schools and local government, regional stories, and the lives of ordinary Americans whose names never make it into the index.</p>
+    <p>We publish for general readers, for students, and for the teacher who slides a book across a desk and says, start here.</p>
   </div>
 </section>
 
 <!-- ===== FORTHCOMING ===== -->
 <section id="forthcoming" class="forthcoming">
   <div class="forthcoming-head">
-    <h2>The first list.</h2>
-    <p>Six titles in the works for 2026 and 2027. Subscribe to the announce list for publication dates as they are set.</p>
+    <h2>What's next.</h2>
+    <p>Five more titles in the works for 2026 and 2027. Subscribe below for publication dates as they are set.</p>
   </div>
   <ol class="toc" style="list-style: none; padding: 0; margin: 0 auto;">
 
     <li class="toc-item">
       <span class="toc-num">I.</span>
-      <div class="toc-text">
-        <h3>The Hidden Stories Behind America's Most Iconic Symbols</h3>
-        <p>What the eagle, the flag, the bell, the seal, and a half-dozen other emblems actually mean, and how they got that way.</p>
-      </div>
-      <span class="toc-when">In development</span>
-    </li>
-
-    <li class="toc-item">
-      <span class="toc-num">II.</span>
       <div class="toc-text">
         <h3>The People Who Built America</h3>
         <p>The Workers, Dreamers, and Outsiders Who Made This Country.</p>
@@ -412,7 +467,7 @@
     </li>
 
     <li class="toc-item">
-      <span class="toc-num">III.</span>
+      <span class="toc-num">II.</span>
       <div class="toc-text">
         <h3>Founding Moments</h3>
         <p>The 8 Days That Could Have Changed America Forever.</p>
@@ -421,7 +476,7 @@
     </li>
 
     <li class="toc-item">
-      <span class="toc-num">IV.</span>
+      <span class="toc-num">III.</span>
       <div class="toc-text">
         <h3>America's Best Ideas</h3>
         <p>The Ideas That Built America and the Price We Still Pay.</p>
@@ -430,7 +485,7 @@
     </li>
 
     <li class="toc-item">
-      <span class="toc-num">V.</span>
+      <span class="toc-num">IV.</span>
       <div class="toc-text">
         <h3>Teaching Your Kids America's Story</h3>
         <p>Conversation Starters for Every Age, from Toddlers to Teens.</p>
@@ -439,7 +494,7 @@
     </li>
 
     <li class="toc-item">
-      <span class="toc-num">VI.</span>
+      <span class="toc-num">V.</span>
       <div class="toc-text">
         <h3>America Through Her Eyes</h3>
         <p>Women Who Changed the Country and Rarely Got a Textbook Page.</p>
@@ -516,7 +571,7 @@
 <!-- ===== FOOTER ===== -->
 <footer>
   <img src="logo.png" alt="Aldridge Americana" class="footer-mark">
-  <p class="footer-tag">American history, told well.</p>
+  <p class="footer-tag">American history, reexamined.</p>
   <p class="footer-meta">© 2026 Aldridge Americana &nbsp;·&nbsp; An imprint of <a href="https://pageandpath.com/">Page &amp; Path Publishing Group</a> &nbsp;·&nbsp; Established 2026</p>
 </footer>
 
